@@ -19,6 +19,7 @@ Acest program C# generează primele 10 numere din seria Fibonacci folosind o buc
 - F(1) = 1
 - F(n) = F(n-1) + F(n-2) pentru n ≥ 2
 
+### Codul Sursa
 
 ```
 using System;
