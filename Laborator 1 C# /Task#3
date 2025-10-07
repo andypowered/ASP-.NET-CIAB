@@ -1,0 +1,53 @@
+# Generator Serii Fibonacci
+
+## Descriere
+Acest program C# generează primele 10 numere din seria Fibonacci folosind o buclă while.
+
+## Funcționalitate
+- Generează primele 10 numere Fibonacci
+- Folosește buclă while pentru iterare
+- Afișează numerele separate prin virgulă
+
+## Cum funcționează
+1. Inițializează primele două numere (0 și 1)
+2. Folosește buclă while pentru a genera următoarele 8 numere
+3. Fiecare număr nou este suma celor două anterioare
+4. Afișează secvența completă
+
+## Algoritm Fibonacci
+- F(0) = 0
+- F(1) = 1
+- F(n) = F(n-1) + F(n-2) pentru n ≥ 2
+
+
+```
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int count = 10;
+        int a = 0;
+        int b = 1;
+        int counter = 0;
+        
+        Console.Write("Primele 10 numere Fibonacci: ");
+        
+        while (counter < count)
+        {
+            Console.Write(a);
+            
+            if (counter < count - 1)
+            {
+                Console.Write(", ");
+            }
+            
+            int next = a + b;
+            a = b;
+            b = next;
+            counter++;
+        }
+    }
+}
+```
