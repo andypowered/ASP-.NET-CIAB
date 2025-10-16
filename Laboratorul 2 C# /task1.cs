@@ -12,23 +12,25 @@ class Program
 
         char cifraCurenta = numar[0];
         int lungimeCurenta = 1;
-
-        for (int i = 1; i < numar.Length; i++)
+        int i = 1; 
+        while (i < numar.Length)
         {
             if (numar[i] == cifraCurenta)
             {
-                lungimeCurenta++;
+                lungimeCurenta++; 
             }
             else
             {
-                if (lungimeCurenta > maxLungime)
+                while (lungimeCurenta > maxLungime)
                 {
                     maxLungime = lungimeCurenta;
                     cifraMax = cifraCurenta;
                 }
+
                 cifraCurenta = numar[i];
                 lungimeCurenta = 1;
             }
+            i++;
         }
 
         if (lungimeCurenta > maxLungime)
